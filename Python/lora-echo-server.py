@@ -5,6 +5,9 @@
 #
 # Repeats back any LoRa packet received.
 #
+# Required packages:
+#  pip install adafruit-circuitpython-rfm9x
+#
 # License: Beerware
 
 import time
