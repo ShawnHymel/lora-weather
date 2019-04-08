@@ -35,7 +35,7 @@ Install Raspbian (with Desktop) on the Raspberry Pi. From a console, run the fol
 pip install adafruit-circuitpython-rfm9x
 ```
 
-Go into the *Python directory* of this repo and run *lora-weather-server.py*.
+Go into the *Python* directory of this repo and run *lora-weather-server.py*.
 
 ```
 python lora-weather-server.py
