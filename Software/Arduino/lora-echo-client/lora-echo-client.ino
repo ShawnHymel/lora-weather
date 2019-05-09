@@ -18,15 +18,16 @@
 #include <RH_RF95.h>
 
 // Parameters
-const int WAIT_TIME = 3000;             // ms
+const int TIMEOUT = 1000;               // Time (ms) to wait for a reply
+const int WAIT_TIME = 100;              // Time (ms) between transmits
 const int TX_BUF_SIZE = 8;              // Transmit buffer size (bytes)
-const int RX_BUF_SIZE = 8;              // Receive buffer size (bytes)
+const uint8_t RX_BUF_SIZE = 8;          // Receive buffer size (bytes)
 const float RFM_FREQ = 915.0;           // Frequency for RFM95W
 const int RFM_TX_POWER = 17;            // 5..23 dBm, 13 dBm is default
 
 // Pins
 // SPI:
-// MOSI = 10
+// MOSI = 11
 // MISO = 12
 // SCK = 13
 const int RFM_RST_PIN = 2;
@@ -91,7 +92,9 @@ void loop() {
   tx_buf[6] = 0xcd;
   tx_buf[7] = 0xef;
 
-  Serial.print("Sending buffer:");
+  // Print what we're sending
+  Serial.println();
+  Serial.print("Sending:\t");
   for ( int i = 0; i < TX_BUF_SIZE; i++) {
     Serial.print(" 0x");
     Serial.print(tx_buf[i], HEX);
@@ -103,9 +106,10 @@ void loop() {
   rfm.waitPacketSent();
 
   // Wait for a reply from server
-  if (rfm.waitAvailableTimeout(1000)) { 
-    if (rfm.recv(rx_buf, RX_BUF_SIZE)) {
-      Serial.print("Received:");
+  if (rfm.waitAvailableTimeout(TIMEOUT)) { 
+    uint8_t rx_buf_size = RX_BUF_SIZE;  // Dunno why they want a pointer...
+    if (rfm.recv(rx_buf, &rx_buf_size)) {
+      Serial.print("Received:\t");
       for ( int i = 0; i < RX_BUF_SIZE; i++) {
         Serial.print(" 0x");
         Serial.print(rx_buf[i], HEX);
@@ -129,4 +133,6 @@ void loop() {
     Serial.println("No reply, is the echo server running?");
     digitalWrite(LED_PIN, LOW);
   }
+
+  delay(WAIT_TIME);
 }

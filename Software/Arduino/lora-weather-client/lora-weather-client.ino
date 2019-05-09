@@ -42,7 +42,7 @@ const int RFM_TX_POWER = 17;            // 5..23 dBm, 13 dBm is default
 
 // Pins
 // SPI:
-// MOSI = 10
+// MOSI = 11
 // MISO = 12
 // SCK = 13
 const int RFM_RST_PIN = 2;

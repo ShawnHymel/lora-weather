@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name RFM95W-868S2)(type Legacy)(uri ${KIPRJMOD}/RFM95W-868S2.lib)(options "")(descr ""))
+)
