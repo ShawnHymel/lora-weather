@@ -1,0 +1,205 @@
+EESchema Schematic File Version 4
+LIBS:adp171-breakout-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 2019-05-21_19-13-09:ADP171AUJZ-R7 U1
+U 1 1 5CE44EFB
+P 4800 3900
+F 0 "U1" H 5900 4287 60  0000 C CNN
+F 1 "ADP171AUJZ-R7" H 5900 4181 60  0000 C CNN
+F 2 "footprints:ADP171AUJZ-R7" H 5900 4140 60  0001 C CNN
+F 3 "" H 4800 3900 60  0000 C CNN
+	1    4800 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5CE455A0
+P 4350 4100
+F 0 "C1" H 4465 4146 50  0000 L CNN
+F 1 "1uF" H 4465 4055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4388 3950 50  0001 C CNN
+F 3 "~" H 4350 4100 50  0001 C CNN
+	1    4350 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5CE46129
+P 7650 4300
+F 0 "C2" H 7765 4346 50  0000 L CNN
+F 1 "1uF" H 7765 4255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7688 4150 50  0001 C CNN
+F 3 "~" H 7650 4300 50  0001 C CNN
+	1    7650 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5CE46931
+P 7250 4300
+F 0 "R1" H 7320 4346 50  0000 L CNN
+F 1 "200k" H 7320 4255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7180 4300 50  0001 C CNN
+F 3 "~" H 7250 4300 50  0001 C CNN
+	1    7250 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5CE477FD
+P 7250 4800
+F 0 "R2" H 7320 4846 50  0000 L CNN
+F 1 "71.5k" H 7320 4755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7180 4800 50  0001 C CNN
+F 3 "~" H 7250 4800 50  0001 C CNN
+	1    7250 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3900 4650 3900
+$Comp
+L power:GND #PWR0101
+U 1 1 5CE48843
+P 7250 5000
+F 0 "#PWR0101" H 7250 4750 50  0001 C CNN
+F 1 "GND" H 7255 4827 50  0000 C CNN
+F 2 "" H 7250 5000 50  0001 C CNN
+F 3 "" H 7250 5000 50  0001 C CNN
+	1    7250 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5CE48ECF
+P 7650 4500
+F 0 "#PWR0102" H 7650 4250 50  0001 C CNN
+F 1 "GND" H 7655 4327 50  0000 C CNN
+F 2 "" H 7650 4500 50  0001 C CNN
+F 3 "" H 7650 4500 50  0001 C CNN
+	1    7650 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5CE4943C
+P 4350 4300
+F 0 "#PWR0103" H 4350 4050 50  0001 C CNN
+F 1 "GND" H 4355 4127 50  0000 C CNN
+F 2 "" H 4350 4300 50  0001 C CNN
+F 3 "" H 4350 4300 50  0001 C CNN
+	1    4350 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5CE4998D
+P 7250 3850
+F 0 "#PWR0104" H 7250 3600 50  0001 C CNN
+F 1 "GND" H 7255 3677 50  0000 C CNN
+F 2 "" H 7250 3850 50  0001 C CNN
+F 3 "" H 7250 3850 50  0001 C CNN
+	1    7250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 4450 7250 4550
+Wire Wire Line
+	7250 4950 7250 5000
+Wire Wire Line
+	7250 4100 7250 4150
+Wire Wire Line
+	7000 4100 7250 4100
+Wire Wire Line
+	7000 4000 7050 4000
+Wire Wire Line
+	7050 4000 7050 3800
+Wire Wire Line
+	7050 3800 7250 3800
+Wire Wire Line
+	7250 3800 7250 3850
+Wire Wire Line
+	4800 4000 4750 4000
+Wire Wire Line
+	4750 4000 4750 4550
+Wire Wire Line
+	4750 4550 7250 4550
+Connection ~ 7250 4550
+Wire Wire Line
+	7250 4550 7250 4650
+Wire Wire Line
+	4800 4100 4650 4100
+Wire Wire Line
+	4650 4100 4650 3900
+Connection ~ 4650 3900
+Wire Wire Line
+	4650 3900 4350 3900
+Wire Wire Line
+	4350 3900 4350 3950
+Wire Wire Line
+	4350 4250 4350 4300
+Connection ~ 7250 4100
+Wire Wire Line
+	7650 4100 7650 4150
+Wire Wire Line
+	7250 4100 7650 4100
+Wire Wire Line
+	7650 4450 7650 4500
+Wire Wire Line
+	4350 3900 4250 3900
+Connection ~ 4350 3900
+Connection ~ 7650 4100
+Wire Wire Line
+	7650 4100 7750 4100
+Text GLabel 4250 3900 0    50   Input ~ 0
+VIN
+Text GLabel 7750 4100 2    50   Input ~ 0
+VOUT
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5CE4EA85
+P 3000 4000
+F 0 "J1" H 2918 4317 50  0000 C CNN
+F 1 "Conn_01x03" H 2918 4226 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3000 4000 50  0001 C CNN
+F 3 "~" H 3000 4000 50  0001 C CNN
+	1    3000 4000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3900 3250 3900
+$Comp
+L power:GND #PWR0105
+U 1 1 5CE50DF2
+P 3600 4050
+F 0 "#PWR0105" H 3600 3800 50  0001 C CNN
+F 1 "GND" H 3605 3877 50  0000 C CNN
+F 2 "" H 3600 4050 50  0001 C CNN
+F 3 "" H 3600 4050 50  0001 C CNN
+	1    3600 4050
+	1    0    0    -1  
+$EndComp
+Text GLabel 3250 3900 2    50   Input ~ 0
+VIN
+Text GLabel 3250 4100 2    50   Input ~ 0
+VOUT
+Wire Wire Line
+	3200 4100 3250 4100
+Wire Wire Line
+	3200 4000 3600 4000
+Wire Wire Line
+	3600 4000 3600 4050
+$EndSCHEMATC
