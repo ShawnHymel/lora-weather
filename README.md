@@ -8,12 +8,12 @@ LoRa client and server. Arduino reads temperature, humidity, and pressure data f
 Required Parts
 --------------
 
- - Arduino UNO
- - 2x Adafruit RFM95W LoRa Breakout
- - Adafruit BME280 Breakout
- - Raspberry Pi 3 Model B
- - 2x Breadboards
- - Jumper wires
+ - [Arduino UNO](https://www.digikey.com/product-detail/en/A000066/1050-1024-ND/2784006/)
+ - 2x [Adafruit RFM95W LoRa Breakout](https://www.digikey.com/product-detail/en/adafruit-industries-llc/3072/1528-1667-ND/6005357)
+ - [Adafruit BME280 Breakout](https://www.digikey.com/product-detail/en/adafruit-industries-llc/2652/1528-1359-ND/5604372)
+ - [Raspberry Pi 3 Model B+](https://www.digikey.com/product-detail/en/raspberry-pi/RASPBERRY-PI-3-MODEL-B/1690-1025-ND/8571724)
+ - 2x [Breadboards](https://www.digikey.com/product-detail/en/bud-industries/BB-32621/377-2094-ND/4156445)
+ - [Jumper wires](https://www.digikey.com/product-detail/en/global-specialties/WK-2/BKWK-2-ND/5231341)
 
 Hardware Setup
 --------------
